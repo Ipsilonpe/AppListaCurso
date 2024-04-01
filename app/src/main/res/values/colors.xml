@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Amarelo">#FFC107</color>
     <color name="corBotoes">#FF9800</color>
+    <color name="cinza">#5A5A5A</color>
 </resources>

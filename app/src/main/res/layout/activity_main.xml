@@ -5,13 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context=".view.MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_titulo"
+        android:textColor="@color/corBotoes"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,11 +30,13 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/txt_hint_nome"
+        android:importantForAutofill="no"
         android:inputType="text"
+        android:textColor="@color/corBotoes"
+        android:textColorHint="#FF9800"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editTextText6"
@@ -42,11 +46,13 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/txt_hint_sobrenome"
+        android:importantForAutofill="no"
         android:inputType="text"
+        android:textColor="@color/corBotoes"
+        android:textColorHint="@color/corBotoes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
 
     <EditText
         android:id="@+id/editTextText7"
@@ -56,11 +62,13 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/txt_hint_curso"
+        android:importantForAutofill="no"
         android:inputType="text"
+        android:textColor="@color/corBotoes"
+        android:textColorHint="@color/corBotoes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
 
     <EditText
         android:id="@+id/editTextText8"
@@ -70,11 +78,13 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/txt_hint_telefone"
+        android:importantForAutofill="no"
         android:inputType="text"
+        android:textColor="@color/corBotoes"
+        android:textColorHint="@color/corBotoes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText7"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText7" />
 
 
     <Button
@@ -109,8 +119,8 @@
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/corBotoes"
         android:text="@string/txt_button_finalizar"
         app:layout_constraintTop_toBottomOf="@+id/button4"

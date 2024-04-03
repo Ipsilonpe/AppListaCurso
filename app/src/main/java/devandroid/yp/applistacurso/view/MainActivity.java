@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
             pessoa = new Pessoa();
             objeto = new Objeto();
-            cidade = new Cidade()
+            cidade = new Cidade();
         });
     }
 }

@@ -1,8 +1,10 @@
 package devandroid.yp.applistacurso.model;
 
-public class Pessoa {
+public class Objeto {
 
     //Construtor
 
-    public Pessoa(){}
+    public Objeto(){
+
+    }
 }

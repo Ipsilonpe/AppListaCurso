@@ -9,11 +9,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.yp.applistacurso.R;
+import devandroid.yp.applistacurso.model.Cidade;
+import devandroid.yp.applistacurso.model.Objeto;
 import devandroid.yp.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
     Pessoa pessoa;
+    Objeto objeto;
+    Cidade cidade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
 
             pessoa = new Pessoa();
+            objeto = new Objeto();
+            cidade = new Cidade()
         });
     }
 }

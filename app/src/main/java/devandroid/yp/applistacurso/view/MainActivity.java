@@ -2,6 +2,8 @@ package devandroid.yp.applistacurso.view;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,17 @@ public class MainActivity extends AppCompatActivity {
     Pessoa outraPessoa;
     String dadosPessoa;
     String dadosOutraPessoa;
+
+    EditText editPrimeiroNome;
+    EditText editSobreNome;
+    EditText editCursoDesejado;
+    EditText editTelefoneContato;
+
+    Button btnLimpar;
+    Button btnSalvar;
+    Button btnFinalizar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,24 @@ public class MainActivity extends AppCompatActivity {
             outraPessoa.setCursoDesejado("java");
             outraPessoa.setTelefoneContato("61888888888");
 
+            editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
+            editSobreNome = findViewById(R.id.editSobreNome);
+            editCursoDesejado = findViewById(R.id.editCursoDesejado);
+            editTelefoneContato = findViewById(R.id.editTelefoneContato);
+
+            btnLimpar = findViewById(R.id.btnLimpar);
+            btnSalvar = findViewById(R.id.btnSalvar);
+            btnFinalizar = findViewById(R.id.btnFinalizar);
+
+            editPrimeiroNome.setText(outraPessoa.getPrimeiroNome());
+            editSobreNome.setText(outraPessoa.getSobreNome());
+            editCursoDesejado.setText(outraPessoa.getCursoDesejado());
+            editTelefoneContato.setText(outraPessoa.getTelefoneContato());
+
+
+
+/*
+
             dadosPessoa = "Primeiro Nome: ";
             dadosPessoa += pessoa.getPrimeiroNome();
             dadosPessoa += " Sobrenome: ";
@@ -53,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             dadosOutraPessoa += outraPessoa.getCursoDesejado();
             dadosOutraPessoa += " Telefone de Contato: ";
             dadosOutraPessoa += outraPessoa.getTelefoneContato();
+*/
 
             Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
             Log.i("POOAndroid","Objeto outrapessoa: "+outraPessoa.toString());

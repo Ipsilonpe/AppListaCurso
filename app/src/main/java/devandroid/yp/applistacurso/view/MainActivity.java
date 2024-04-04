@@ -2,8 +2,10 @@ package devandroid.yp.applistacurso.view;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,6 +66,38 @@ public class MainActivity extends AppCompatActivity {
             editTelefoneContato.setText(outraPessoa.getTelefoneContato());
 
 
+            btnLimpar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    editPrimeiroNome.setText("");
+                    editSobreNome.setText("");
+                    editCursoDesejado.setText("");
+                    editTelefoneContato.setText("");
+                }
+            });
+
+            btnFinalizar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(MainActivity.this, "Volte Sempre", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+            });
+
+            btnSalvar.setOnClickListener(new View.OnClickListener() {
+
+
+
+                @Override
+                public void onClick(View v) {
+                    pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
+                    pessoa.setSobreNome(editSobreNome.getText().toString());
+                    pessoa.setCursoDesejado(editCursoDesejado.getText().toString());
+                    pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
+
+                    Toast.makeText(MainActivity.this, "Salvo "+pessoa.toString(), Toast.LENGTH_LONG).show();
+                }
+            });
 
 /*
 

@@ -12,10 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import devandroid.yp.applistacurso.R;
+import devandroid.yp.applistacurso.controller.PessoaController;
 import devandroid.yp.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
+
+   PessoaController controller;
     Pessoa pessoa;
     Pessoa outraPessoa;
 
@@ -35,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        controller = new PessoaController();
+        controller.toString();
 
         pessoa = new Pessoa();
         pessoa.setPrimeiroNome("Yuri");
@@ -92,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
+
+                controller.salvar(pessoa);
+
+
             }
         });
 
